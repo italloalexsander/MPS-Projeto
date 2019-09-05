@@ -12,6 +12,7 @@ Nota-se também o uso explicito(até no texto) dos padrões Factory Method e Abs
 
 No Factory Method ele usa a Classe DAOFactory e através da RdBDAOFactory e RdbDAO1 e RdbDAO2, assim como DAO1 e DAO2, ele garante uma 
 flexibilidade ao padrão DAO. No caso para que ele funcione é necessário que o sistema de persistência de dados seja sempre o mesmo.
+
 Já o Abstract Factory se torna uma generalização do caso anterior adicionando a possiblidade de uso de diferentes  tipos de persistência de
 dados porque a classe DAOFactory se torna abstrata, deixando necessário para as classes que a herdam todo o processo de comunicação e 
 gerenciamento com a persistência de dados.
