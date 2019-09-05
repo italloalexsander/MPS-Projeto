@@ -1,0 +1,17 @@
+Nomes: 
+Itallo Alexsander
+Makoby Lopes
+Matheus Dantas
+
+Questão 1:
+Analisando o diagrama mostrando as relações do padrão DAO, ele aparenta está no padrão Façade, visto que através do DataAccessObject ele 
+encapsula tudo vindo do DataSource(que representa a implementação do banco de dados), e permite para o BusinessObject(que nesse caso é a
+representação do cliente de dados e requer acesso ao DataSource)acesso transparente ao DataSource.
+
+Nota-se também o uso explicito(até no texto) dos padrões Factory Method e Abstract Factory como estratégias de uso do DAO.
+
+No Factory Method ele usa a Classe DAOFactory e através da RdBDAOFactory e RdbDAO1 e RdbDAO2, assim como DAO1 e DAO2, ele garante uma 
+flexibilidade ao padrão DAO. No caso para que ele funcione é necessário que o sistema de persistência de dados seja sempre o mesmo.
+Já o Abstract Factory se torna uma generalização do caso anterior adicionando a possiblidade de uso de diferentes  tipos de persistência de
+dados porque a classe DAOFactory se torna abstrata, deixando necessário para as classes que a herdam todo o processo de comunicação e 
+gerenciamento com a persistência de dados.
